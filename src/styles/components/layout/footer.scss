@@ -1,0 +1,28 @@
+footer {
+  bottom: 0;
+  padding: 30px 20px 100px;
+
+  font-size: 12px;
+
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    > button,
+    a {
+      margin-right: 15px;
+      padding: 5px 0;
+    }
+  }
+
+  .footer_text {
+    color: #6f6e6f;
+    margin-bottom: 15px;
+    > p > span > a {
+      color: #6f6e6f;
+    }
+    > p {
+      margin: 3px;
+    }
+  }
+}

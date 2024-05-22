@@ -1,0 +1,28 @@
+.shopjoin-address-input {
+  display: flex;
+  flex-direction: column;
+  > div {
+    > input {
+      padding: 10px;
+      margin-bottom: 5px;
+    }
+
+    > button {
+      border: 1px solid gray;
+      padding: 10px;
+      margin-left: 5px;
+    }
+  }
+  > input {
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+}
+
+.shopjoin-btn {
+  background-color: #504fb3;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+}

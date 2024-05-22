@@ -1,0 +1,72 @@
+.address-search-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  > form {
+    display: flex;
+
+    > input {
+      padding: 5px 10px;
+    }
+    > button {
+      padding: 5px;
+    }
+  }
+  > div {
+    padding: 10px;
+  }
+}
+.address-search-totalCount {
+  display: flex;
+  flex-direction: row;
+
+  font-size: 15px;
+  font-weight: 600;
+  padding-bottom: 5px;
+  padding-left: 5px;
+
+  .address-search-totalCount-num {
+    padding-left: 5px;
+    color: #514eb3;
+  }
+  border-bottom: 1px solid black;
+}
+
+.address-search-list {
+  height: 700px;
+  overflow-y: scroll;
+  .address-search-list-btn {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    .address-search-list-zipCode {
+      font-size: 15px;
+      font-weight: 600;
+      padding-bottom: 5px;
+      padding-left: 5px;
+    }
+    .address-search-list-item {
+      display: flex;
+      flex-direction: row;
+      > div {
+        border: 1px solid gray;
+        width: 60px;
+        height: 18px;
+      }
+      > p {
+        margin: 0;
+        padding-left: 5px;
+        text-align: start;
+      }
+    }
+  }
+  .address-search-ref {
+    height: 50px;
+  }
+}

@@ -1,0 +1,63 @@
+@import "./function";
+@import "./reset.scss";
+@import "../components/layout/header.scss";
+@import "../components/layout/footer.scss";
+@import "../components/nav/bottomNav.scss";
+@import "../components/nav/categoriesHeader.scss";
+@import "../components/nav/categoriesSide.scss";
+@import "../components/modal/modal.scss";
+@import "../components/modal/addressModal.scss";
+@import "../components/tab/tab.scss";
+@import "../pages/member/login/login.scss";
+@import "../pages/member/join/joinShop.scss";
+@import "../pages/member/mypage/mypage.scss";
+
+@import "../common/mixin";
+
+body {
+  background-color: #f4f7f8;
+}
+
+button {
+  border-style: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.page-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  .page-inner {
+    display: flex;
+    flex-direction: row;
+  }
+  .page-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile {
+      display: none;
+    }
+  }
+  .page-content {
+    background-color: #fff;
+    .l-content {
+      width: 500px;
+    }
+  }
+}

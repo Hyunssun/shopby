@@ -1,0 +1,19 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .tabs-menu {
+    display: flex;
+    flex-direction: row;
+
+    > li {
+      padding: 15px;
+      background-color: #f9f8f8;
+    }
+    .is-active {
+      background-color: white;
+      border-top: 1px solid black;
+    }
+  }
+}

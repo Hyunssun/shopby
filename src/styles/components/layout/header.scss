@@ -1,0 +1,31 @@
+header {
+  position: sticky;
+  top: 0;
+  min-height: 90px;
+  display: flex;
+  background-color: white;
+
+  .header-main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    > img {
+      width: 200px;
+    }
+  }
+
+  .header-sub {
+    width: 100%;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    > button {
+      position: absolute;
+      left: 0;
+    }
+  }
+}
