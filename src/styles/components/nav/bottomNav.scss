@@ -1,13 +1,15 @@
 .bottom-nav {
+  background-color: white;
   position: fixed;
   bottom: 0;
   width: 500px;
+  padding: 20px 0;
+
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 
-  padding: 20px 0;
   > a,
   button {
     display: flex;
