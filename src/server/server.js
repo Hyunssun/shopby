@@ -65,3 +65,29 @@ export const getProfileAPI = async (accessToken) => {
 export const postFindIdAPI = async (postData) => {
   return instance.post("/profile/find-id", postData);
 };
+
+/*-----------------------promotion-------------------------*/
+
+// 내 쿠폰 가져오기
+export const getCouponsAPI = async (pageNumber, pageSize, token, usable) => {
+  return instance.get(
+    `/coupons?pageNumber=${pageNumber}&pageSize=${pageSize}`,
+    {
+      params: {
+        usable: usable,
+      },
+      headers: {
+        accessToken: token,
+      },
+    }
+  );
+};
+
+// 코드 쿠폰 발급하기
+export const postCouponsCodeAPI = async (token, code) => {
+  return instance.post(`/coupons/register-code/${code}`, {
+    headers: {
+      accessToken: token,
+    },
+  });
+};

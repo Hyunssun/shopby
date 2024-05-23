@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export const Tab = ({ tabContArr }) => {
+export const Tab = ({ tabContArr, setIndex }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  
+  useEffect(() => {
+    setIndex(activeIndex);
+  }, [activeIndex]);
   return (
     <div className="tabs">
       <ul className="tabs-menu">
@@ -12,7 +14,9 @@ export const Tab = ({ tabContArr }) => {
             <li
               key={index}
               className={activeIndex === index ? "is-active" : ""}
-              onClick={() => setActiveIndex(index)}
+              onClick={() => {
+                setActiveIndex(index);
+              }}
             >
               {item.tabTitle}
             </li>
