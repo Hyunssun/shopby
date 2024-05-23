@@ -91,3 +91,12 @@ export const postCouponsCodeAPI = async (token, code) => {
     },
   });
 };
+
+// 적립금
+export const getAccumulationAPI = async (token) => {
+  return instance.get(`/profile/accumulations`, {
+    headers: {
+      accessToken: token,
+    },
+  });
+};
