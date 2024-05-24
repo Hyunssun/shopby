@@ -4,7 +4,9 @@ export const Tab = ({ tabContArr, setIndex }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    setIndex(activeIndex);
+    if (tabContArr[0].tabTitle == "사용 가능 쿠폰") {
+      setIndex(activeIndex);
+    }
   }, [activeIndex]);
   return (
     <div className="tabs">
