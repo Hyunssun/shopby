@@ -9,6 +9,7 @@ import { profileInfo } from "../../../store/profileInfo";
 import { accessToken } from "../../../store/accessToken";
 import { useState } from "react";
 import Modal from "../../../components/modal/Modal";
+import { LuChevronRight } from "react-icons/lu";
 
 export const Mypage = () => {
   const navigate = useNavigate();
@@ -45,23 +46,33 @@ export const Mypage = () => {
 
   return (
     <div className="mypage">
-      <div>
+      <div className="mypage-group1">
         <Link to={"coupon"}>보유쿠폰</Link>
         <Link to={"accumulation"}>적립금</Link>
         <Link to={"like"}>좋아요</Link>
       </div>
-      <div>
+      <div className="mypage-group2">
         <Link to={"orders"}>주문/배송 조회</Link>
         <Link to={"claims"}>클레임 내역</Link>
       </div>
-      <div>
-        <Link to={"product-review"}>상품후기</Link>
-        <Link to={"product-inquiry"}>상품문의</Link>
-        <Link to={"personal-inquiry"}>1:1문의</Link>
-        <button onClick={() => setModalOpen(true)}>회원정보 수정</button>
-        <Link to={"shipping-address"}>배송지 관리</Link>
+      <div className="mypage-group3">
+        <Link to={"product-review"}>
+          <div>상품후기</div> <LuChevronRight size={30} color="#7E7F7F" />
+        </Link>
+        <Link to={"product-inquiry"}>
+          <div>상품문의</div> <LuChevronRight size={30} color="#7E7F7F" />
+        </Link>
+        <Link to={"personal-inquiry"}>
+          <div>1:1문의</div> <LuChevronRight size={30} color="#7E7F7F" />
+        </Link>
+        <Link onClick={() => setModalOpen(true)}>
+          <div>회원정보 수정</div> <LuChevronRight size={30} color="#7E7F7F" />
+        </Link>
+        <Link to={"shipping-address"}>
+          <div>배송지 관리</div> <LuChevronRight size={30} color="#7E7F7F" />
+        </Link>
       </div>
-      <div>
+      <div className="mypage-group4">
         <button onClick={onClickLogout}>로그아웃</button>
         <button>회원탈퇴</button>
       </div>
