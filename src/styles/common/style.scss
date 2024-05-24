@@ -48,13 +48,14 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    width: 500px;
     @include mobile {
       display: none;
     }
   }
   .page-content {
     background-color: #fff;
+    min-height: 100vh;
     .l-content {
       width: 500px;
     }
